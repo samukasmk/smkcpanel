@@ -1,4 +1,5 @@
-#!/usr/bin/env python
+#!/Users/samukasmk/Projects/django_examples/smkcpanel/venv/bin/python
+#
 import os
 import sys
 
