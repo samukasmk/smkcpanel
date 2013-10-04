@@ -18,6 +18,6 @@ urlpatterns = patterns('',
     # url(r'^admin/', include(admin.site.urls)),
     url(r'^$', RedirectView.as_view(url='/server/')),
     url(r'server', include('smkcpanel.dashboard.urls')),
-    url(r'^accounts/', include('smkcpanel.allauth.urls')),
-    url(r'^accounts/profile/$', TemplateView.as_view(template_name='allauth/plain/example/profile.html')),
+    #url(r'^accounts/', include('smkcpanel.allauth.urls')),
+    #url(r'^accounts/profile/$', TemplateView.as_view(template_name='allauth/plain/example/profile.html')),
 )

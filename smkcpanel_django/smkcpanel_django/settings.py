@@ -110,27 +110,27 @@ ROOT_URLCONF = 'smkcpanel.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'smkcpanel_django.wsgi.application'
 
-AUTHENTICATION_BACKENDS = (
-    # Needed to login by username in Django admin, regardless of `allauth`
-    "django.contrib.auth.backends.ModelBackend",
+# AUTHENTICATION_BACKENDS = (
+#     # Needed to login by username in Django admin, regardless of `allauth`
+#     "django.contrib.auth.backends.ModelBackend",
 
-    # `allauth` specific authentication methods, such as login by e-mail
-    "allauth.account.auth_backends.AuthenticationBackend",    
-)
+#     # `allauth` specific authentication methods, such as login by e-mail
+#     "allauth.account.auth_backends.AuthenticationBackend",    
+# )
 
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.core.context_processors.static",
-    "django.core.context_processors.request",
-    "django.contrib.messages.context_processors.messages",
+# TEMPLATE_CONTEXT_PROCESSORS = (
+#     "django.contrib.auth.context_processors.auth",
+#     "django.core.context_processors.debug",
+#     "django.core.context_processors.i18n",
+#     "django.core.context_processors.media",
+#     "django.core.context_processors.static",
+#     "django.core.context_processors.request",
+#     "django.contrib.messages.context_processors.messages",
 
-    "allauth.account.context_processors.account",
-    "allauth.socialaccount.context_processors.socialaccount",
-)
+#     "allauth.account.context_processors.account",
+#     "allauth.socialaccount.context_processors.socialaccount",
+# )
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
@@ -149,9 +149,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'smkcpanel.allauth',
-    'smkcpanel.allauth.account',
-    'smkcpanel.allauth.socialaccount',
+    # 'smkcpanel.allauth',
+    # 'smkcpanel.allauth.account',
+    # 'smkcpanel.allauth.socialaccount',
     # 'allauth.socialaccount.providers.dropbox',
     # 'allauth.socialaccount.providers.facebook',
     # 'allauth.socialaccount.providers.google',
