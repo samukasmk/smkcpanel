@@ -1,13 +1,14 @@
 # Create your views here.
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 def Home(request):
 	#return HttpResponse('Aloha!')
 
 	return render(request, 'dashboard/aloha.html')
 
-
+@login_required
 def SayMyName(request, called_name = None):
 
 	if called_name != None:

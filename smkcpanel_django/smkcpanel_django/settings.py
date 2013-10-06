@@ -118,6 +118,7 @@ WSGI_APPLICATION = 'smkcpanel_django.wsgi.application'
 #     "allauth.account.auth_backends.AuthenticationBackend",    
 # )
 
+LOGIN_REDIRECT_URL = '/server'
 
 # TEMPLATE_CONTEXT_PROCESSORS = (
 #     "django.contrib.auth.context_processors.auth",
