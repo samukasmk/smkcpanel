@@ -1,8 +1,5 @@
 # Django settings for smkcpanel_django project.
 
-import os
-PROJECT_ROOT = os.path.normpath(os.path.dirname(os.path.abspath(__file__)))
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -105,20 +102,8 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'smkcpanel.urls'
-
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'smkcpanel_django.wsgi.application'
-
-# AUTHENTICATION_BACKENDS = (
-#     # Needed to login by username in Django admin, regardless of `allauth`
-#     "django.contrib.auth.backends.ModelBackend",
-
-#     # `allauth` specific authentication methods, such as login by e-mail
-#     "allauth.account.auth_backends.AuthenticationBackend",    
-# )
-
-LOGIN_REDIRECT_URL = '/server'
 
 # TEMPLATE_CONTEXT_PROCESSORS = (
 #     "django.contrib.auth.context_processors.auth",
@@ -128,18 +113,13 @@ LOGIN_REDIRECT_URL = '/server'
 #     "django.core.context_processors.static",
 #     "django.core.context_processors.request",
 #     "django.contrib.messages.context_processors.messages",
-
-#     "allauth.account.context_processors.account",
-#     "allauth.socialaccount.context_processors.socialaccount",
 # )
 
 TEMPLATE_DIRS = (
+    'a'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(PROJECT_ROOT, 'smkcpanel', 'templates'),
-    #os.path.join(PROJECT_ROOT, 'smkcpanel', 'templates', 'allauth', 'plain', 'example'),
-    os.path.join(PROJECT_ROOT, 'smkcpanel', 'dashboard', 'templates')
 )
 
 INSTALLED_APPS = (
@@ -149,23 +129,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # 'smkcpanel.allauth',
-    # 'smkcpanel.allauth.account',
-    # 'smkcpanel.allauth.socialaccount',
-    # 'allauth.socialaccount.providers.dropbox',
-    # 'allauth.socialaccount.providers.facebook',
-    # 'allauth.socialaccount.providers.google',
-    # 'allauth.socialaccount.providers.github',
-    # 'allauth.socialaccount.providers.linkedin',
-    # 'allauth.socialaccount.providers.openid',
-    # 'allauth.socialaccount.providers.persona',
-    # 'allauth.socialaccount.providers.soundcloud',
-    # 'allauth.socialaccount.providers.stackexchange',
-    # 'allauth.socialaccount.providers.twitch',
-    # 'allauth.socialaccount.providers.twitter',
-    # 'allauth.socialaccount.providers.vimeo',
-    # 'allauth.socialaccount.providers.weibo',
 
     'smkcpanel',
     'smkcpanel.dashboard',
@@ -206,3 +169,13 @@ LOGGING = {
         },
     }
 }
+
+###################################
+# smkcpanel - specific parameters #
+###################################
+import os
+PROJECT_ROOT = os.path.normpath(os.path.dirname(os.path.abspath(__file__)))
+ROOT_URLCONF = 'smkcpanel.urls'
+LOGIN_REDIRECT_URL = '/server'
+TEMPLATE_DIRS += (os.path.join(PROJECT_ROOT, 'smkcpanel', 'templates'))
+TEMPLATE_DIRS += (os.path.join(PROJECT_ROOT, 'smkcpanel', 'dashboard', 'templates'))
