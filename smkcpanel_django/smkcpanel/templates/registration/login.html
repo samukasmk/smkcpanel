@@ -11,14 +11,14 @@
 
         <legend class="text-center">"The Developer Toolkit"</legend>
 
-        <h4>Please Sign In</h4>
-
-
     {% if form.errors %}
         <div class="alert alert-danger">
           <a class="close" data-dismiss="alert" href="#">×</a>Incorrect Username or Password!
         </div>
     {% endif %}
+
+        <h4>Please Sign In</h4>
+            
         <form role="form" method="POST" action="{% url 'django.contrib.auth.views.login' %}" accept-charset="UTF-8">
           {% csrf_token %}
 

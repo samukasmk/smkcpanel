@@ -11,11 +11,13 @@
 
         <legend class="text-center">"The Developer Toolkit"</legend>
 
-        <h4>Please Sign In</h4>
-
         <div class="alert alert-info">
-          <a class="close" data-dismiss="alert" href="#">×</a> Logged Out!
+          <a class="close" data-dismiss="alert" href="#">×</a>Thanks for using <b>smkCPanel.</b></div>
+        <div class="alert alert-success">
+          <a class="close" data-dismiss="alert" href="#">×</a>You are successfully <b>Logged Out !</b>
         </div>
+
+        <h4>Please Sign In</h4>
 
         <form role="form" method="POST" action="{% url 'django.contrib.auth.views.login' %}" accept-charset="UTF-8">
           {% csrf_token %}
